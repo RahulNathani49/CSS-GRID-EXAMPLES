@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Title </title>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .container {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        background-color: aquamarine;
+        grid-template-rows: 1fr 4fr 1fr;
+        grid-template-columns: 1fr 4fr;
+
+        grid-row-gap: 5px;
+        grid-column-gap: 5px;
+        grid-template-areas:
+            "a a"
+            "b c"
+            "d d";
+    }
+
+
+    .a {
+        grid-area: a;
+        background-color:black;
+    }
+
+    .b {
+        grid-area: b;
+        background-color: cadetblue;
+    }
+
+    .c {
+        grid-area: c;
+        background-color: darkgoldenrod;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "c1 c1 c1 c2 c2 c2"
+            "c3 c3 c3 c3 c3 c3"
+            "c4 c4 c5 c5 c6 c6";
+
+
+    }
+
+    .c1 {
+        background-color: blue;
+        grid-area: c1;
+    }
+
+    .c2 {
+        background-color: green;
+        grid-area: c2;
+    }
+
+    .c3 {
+        background-color: red;
+        grid-area: c3;
+    }
+
+    .c4 {
+        background-color: blanchedalmond;
+        grid-area: c4;
+    }
+
+    .c5 {
+        grid-area: c5;
+        background-color: grey;
+    }
+    .c6{
+        grid-area: c6;
+        background-color: fuchsia;
+    }
+
+    .d {
+        grid-area: d;
+        background-color: greenyellow;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+            <div class="c6"></div>
+        </div>
+        <div class="d"></div>
+
+    </div>
+
+</body>
+
+</html>
